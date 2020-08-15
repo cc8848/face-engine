@@ -320,7 +320,7 @@ func (engine *FaceEngine) FaceFeatureExtract(width, height int, format C.MInt32,
 //t,_ := ioutil.ReadAll(f)
 //FromFile.FaceTureByByte(t)
 //FromFile即可放入FaceFeatureCompare函数与其他特征进行对比
-func (this *FaceFeature) FaceTureByByte(bytes []byte)(err error){		//(featture FaceFeature,err error)
+func (this *FaceFeature) FaceTureByByte(bytes []byte)(err error){		 //(featture FaceFeature,err error)
 	asfFaceFeature := &C.ASF_FaceFeature{}
 	arr := (*C.MByte)(C.malloc(C.size_t(int32(len(bytes)))))
 	featurePtr := (*C.uchar)(unsafe.Pointer(C.CString(string(bytes))))
